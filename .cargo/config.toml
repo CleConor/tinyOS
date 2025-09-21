@@ -1,0 +1,8 @@
+[target.riscv32imac-unknown-none-elf]
+ rustflags = [
+	"-C", "link-arg=-Tkernel.ld",   # our memory map
+	"-C", "link-arg=-Map=kernel.map",
+]
+ 
+ [build]
+ target = "riscv32imac-unknown-none-elf"

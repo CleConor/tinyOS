@@ -1,0 +1,16 @@
+[package]
+name = "riscv32-nogui-os"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+
+[[bin]]
+name = "riscv32-nogui-os"
+path = "src/kernel.rs"
